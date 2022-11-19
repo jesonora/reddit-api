@@ -51,24 +51,12 @@ class ColorFormatter(StandardFormatter):
     )
 
     level_name_colors = {
-        logging.DEBUG: lambda level_name: click.style(
-            str(level_name), fg="cyan"
-        ),
-        logging.INFO: lambda level_name: click.style(
-            str(level_name), fg="green"
-        ),
-        logging.WARNING: lambda level_name: click.style(
-            str(level_name), fg="yellow"
-        ),
-        logging.ERROR: lambda level_name: click.style(
-            str(level_name), fg="red"
-        ),
-        logging.CRITICAL: lambda level_name: click.style(
-            (level_name), fg="bright_red"
-        ),
-        logging.NOTSET: lambda level_name: click.style(
-            str(level_name), fg="blue"
-        ),
+        logging.DEBUG: lambda level_name: click.style(str(level_name), fg="cyan"),
+        logging.INFO: lambda level_name: click.style(str(level_name), fg="green"),
+        logging.WARNING: lambda level_name: click.style(str(level_name), fg="yellow"),
+        logging.ERROR: lambda level_name: click.style(str(level_name), fg="red"),
+        logging.CRITICAL: lambda level_name: click.style((level_name), fg="bright_red"),
+        logging.NOTSET: lambda level_name: click.style(str(level_name), fg="blue"),
     }
 
     def format_request_msg(

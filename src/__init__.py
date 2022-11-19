@@ -1,1 +1,1 @@
-from src.routes import create_application # noqa
+from src.routes import create_application  # noqa
