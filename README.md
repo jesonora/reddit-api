@@ -24,7 +24,6 @@ curl -X 'GET' 'http://127.0.0.1:8000/api/v1/scores/webdev?sort_by=created_utc'
 ## Project structure
 ````
 fastapi-project
-├── alembic/
 ├── src
 │   ├── api
 │   │   ├── comments.py
