@@ -15,7 +15,7 @@ def get_pushshift_data(**kwargs):
     Read more: https://github.com/pushshift/api
     """
 
-    base_url = f"https://api.pushshift.io/reddit/search/comment/"
+    base_url = "https://api.pushshift.io/reddit/search/comment/"
     payload = kwargs
     print(payload)
     request = requests.get(base_url, params=payload)
@@ -24,7 +24,8 @@ def get_pushshift_data(**kwargs):
 
 def sentiment_scores(*sentence):
     """
-    Gets polarization score using VADER (Valence Aware Dictionary and Sentiment Reasoner)
+    Gets polarization score using VADER (Valence Aware Dictionary
+    and Sentiment Reasoner)
 
     Read more: https://github.com/cjhutto/vaderSentiment
 
@@ -44,7 +45,8 @@ def get_comment_df(
     sort_by: str = "created_utc",
 ):
     """
-    Given a set of comments, it returns the polarization score and the class of the comment, positive or negative.
+    Given a set of comments, it returns the polarization score and the
+    class of the comment, positive or negative.
 
     :param subreddit: subreddit name
     :param size: number of comments to return

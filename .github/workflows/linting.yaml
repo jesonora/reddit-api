@@ -18,7 +18,7 @@ jobs:
         run: pip install flake8
 
       - name: run flake8
-        run: flake8 src/
+        run: flake8 --max-line-length=120 --ignore=E203,W503 src/
 
   black:
     runs-on: ubuntu-latest
