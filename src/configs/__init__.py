@@ -16,3 +16,4 @@ def get_settings():
         object: The instance of the current used settings class.
     """
     return Settings()
+
