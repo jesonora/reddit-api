@@ -1,4 +1,4 @@
-# Reedit API
+# Reddit API
 
 This is an example to in local:
 ````shell
