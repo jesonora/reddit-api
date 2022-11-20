@@ -1,5 +1,6 @@
 """Define logging related utility functions and classes."""
 import logging
+
 import click
 
 status_code_colors = {

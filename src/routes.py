@@ -1,11 +1,12 @@
 """Module containing FastAPI instance related functions and classes."""
 import logging.config
 
-from src.configs import get_settings
-from .api import api_router
-
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
+
+from src.configs import get_settings
+
+from .api import api_router
 
 settings = get_settings()
 

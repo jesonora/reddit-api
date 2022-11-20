@@ -36,3 +36,20 @@ jobs:
 
       - name: run black
         run: black --check --verbose --diff src/
+
+  isort:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: setup requirements
+        run: pip install isort==5.10.1
+
+      - name: run isort
+        run: isort --check --verbose --diff src/

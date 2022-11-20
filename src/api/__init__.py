@@ -1,5 +1,6 @@
 """The main APIRouter is defined to include all the sub routers from each module inside the API folder"""
 from fastapi import APIRouter
+
 from .base import base_router
 
 """

@@ -1,7 +1,9 @@
 """Base settings class contains only important fields."""
 from typing import Dict
+
 from pydantic import BaseModel, BaseSettings
-from ..utils.logging import StandardFormatter, ColorFormatter
+
+from ..utils.logging import ColorFormatter, StandardFormatter
 
 
 class LoggingConfig(BaseModel):
@@ -41,6 +43,5 @@ class Settings(BaseSettings):
                 "handlers": ["consoleHandler"],
                 "level": "DEBUG",
             },
-            "uvicorn": {"handlers": ["consoleHandler"]},
         },
     }

@@ -5,3 +5,4 @@ black
 pandas
 vaderSentiment
 pre-commit
+isort

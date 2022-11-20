@@ -1,11 +1,11 @@
 """Endpoints for health check and getting version information"""
-from fastapi import APIRouter, Query
 import logging
 from typing import Any, Union
 
+from fastapi import APIRouter, Query
+
 from ..configs import get_settings
 from .comments import get_comment_df
-
 
 settings = get_settings()
 logger = logging.getLogger(settings.PROJECT_SLUG)
