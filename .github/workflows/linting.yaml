@@ -53,3 +53,20 @@ jobs:
 
       - name: run isort
         run: isort --check --verbose --diff src/
+
+  bandit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: setup requirements
+        run: pip install bandit==1.7.4
+
+      - name: run bandit
+        run: bandit --check --verbose --diff src/
